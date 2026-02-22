@@ -110,9 +110,9 @@ After running the seed script, you can login with:
 
 | Email | Password |
 |-------|----------|
-| alice@company.com | password123 |
-| bob@company.com | password123 |
-| carol@company.com | password123 |
+| jay@company.com | password123 |
+| Angel@company.com | password123 |
+| Jingxian@company.com | password123 |
 | david@company.com | password123 |
 | emma@company.com | password123 |
 
@@ -143,7 +143,3 @@ After running the seed script, you can login with:
 6. Edit your profile and toggle email visibility
 7. Test password reset via Forgot Password (check console for token)
 8. Try signing up with a non-company email to see validation
-
-## Author
-
-Built with Emergent AI
