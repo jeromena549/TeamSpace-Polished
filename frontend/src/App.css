@@ -1,34 +1,103 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* App-specific styles */
+
+.auth-background {
+    background-image: linear-gradient(to top, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.4)), url('https://images.unsplash.com/photo-1616952555588-e1d2d732af76');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
+/* Card hover effects */
+.member-card {
+    transition: all 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Message bubble styles */
+.message-sent {
+    background-color: #334155;
+    color: white;
+    border-radius: 16px 16px 4px 16px;
+}
+
+.message-received {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    border-radius: 16px 16px 16px 4px;
+}
+
+/* Status dot animation */
+.status-online {
+    position: relative;
+}
+
+.status-online::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #10b981;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
     }
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
+/* Search input focus */
+.search-input:focus {
+    box-shadow: 0 0 0 3px rgba(51, 65, 85, 0.1);
+}
+
+/* Avatar fallback */
+.avatar-fallback {
+    background: linear-gradient(135deg, #334155, #475569);
+    color: white;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    font-weight: 600;
 }
 
-.App-link {
-    color: #61dafb;
+/* Conversation list hover */
+.conversation-item {
+    transition: background-color 0.2s ease;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.conversation-item:hover {
+    background-color: #f8fafc;
+}
+
+/* Form input transitions */
+input, textarea {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button press effect */
+.btn-press:active {
+    transform: scale(0.98);
+}
+
+/* Empty state */
+.empty-state {
+    background-image: url('https://images.pexels.com/photos/12977019/pexels-photo-12977019.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
 }
