@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "app_name": "Sync",
+    "version": "1.0",
+    "description": "Internal company social platform for employee connection and directory.",
+    "design_persona": "E1 - The Anti-AI Designer",
+    "archetype": "Swiss Organic (Archetype 4 + 1)",
+    "primary_audience": "Internal Employees"
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Outfit, sans-serif",
+      "body": "DM Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight leading-none",
+      "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+      "h3": "text-2xl font-medium tracking-normal",
+      "body_lg": "text-lg leading-relaxed",
+      "body_base": "text-base leading-relaxed text-slate-600",
+      "caption": "text-sm text-slate-500 uppercase tracking-widest font-medium"
+    },
+    "weights": {
+      "light": "font-light",
+      "normal": "font-normal",
+      "medium": "font-medium",
+      "semibold": "font-semibold",
+      "bold": "font-bold"
+    },
+    "install_instructions": "Import 'Outfit' and 'DM Sans' from Google Fonts in index.css. @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap');"
+  },
+  "colors": {
+    "theme_mode": "light",
+    "palette": {
+      "primary": {
+        "DEFAULT": "#334155",
+        "foreground": "#F8FAFC",
+        "hover": "#1E293B",
+        "description": "Deep Slate Indigo - Professional, calm, authoritative."
+      },
+      "secondary": {
+        "DEFAULT": "#F1F5F9",
+        "foreground": "#0F172A",
+        "description": "Off-white/light grey for cards and subtle backgrounds."
+      },
+      "accent": {
+        "DEFAULT": "#10B981",
+        "foreground": "#FFFFFF",
+        "description": "Emerald Green - Used for 'Online' status and positive actions."
+      },
+      "destructive": {
+        "DEFAULT": "#EF4444",
+        "foreground": "#FFFFFF"
+      },
+      "background": {
+        "DEFAULT": "#FFFFFF",
+        "subtle": "#F8FAFC",
+        "canvas": "#F1F5F9"
+      },
+      "text": {
+        "primary": "#0F172A",
+        "secondary": "#64748B",
+        "muted": "#94A3B8"
+      }
+    },
+    "gradients": {
+      "login_overlay": "linear-gradient(to top, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.2))",
+      "card_hover": "linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0))"
+    },
+    "usage_rules": {
+      "text_contrast": "Ensure primary text is #0F172A on white backgrounds. Use #64748B for secondary text.",
+      "no_gradients": "Do not use gradients for buttons or main backgrounds. Use solid, matte colors.",
+      "status_colors": {
+        "online": "bg-emerald-500",
+        "offline": "bg-slate-300",
+        "busy": "bg-amber-500"
+      }
+    }
+  },
+  "layout": {
+    "spacing_scale": {
+      "container_padding": "p-6 md:p-12",
+      "section_gap": "gap-8 md:gap-12",
+      "component_gap": "gap-4"
+    },
+    "border_radius": {
+      "default": "rounded-lg",
+      "card": "rounded-xl",
+      "button": "rounded-md",
+      "avatar": "rounded-full"
+    },
+    "grids": {
+      "directory": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6",
+      "dashboard_hero": "grid grid-cols-1 lg:grid-cols-12 gap-8"
+    },
+    "containers": {
+      "main_wrapper": "max-w-7xl mx-auto w-full",
+      "narrow_wrapper": "max-w-2xl mx-auto w-full"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 rounded-md font-medium transition-transform active:scale-95",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 px-8 rounded-md font-medium",
+      "ghost": "hover:bg-accent/10 hover:text-accent h-10 px-4 rounded-md font-medium",
+      "link": "text-primary underline-offset-4 hover:underline"
+    },
+    "cards": {
+      "base": "bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-xl p-6",
+      "interactive": "cursor-pointer group hover:border-slate-300"
+    },
+    "inputs": {
+      "base": "flex h-11 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+      "label": "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 mb-2 block text-slate-700"
+    },
+    "avatars": {
+      "size_sm": "h-8 w-8",
+      "size_md": "h-10 w-10",
+      "size_lg": "h-16 w-16",
+      "size_xl": "h-32 w-32",
+      "style": "rounded-full object-cover border-2 border-white shadow-sm"
+    },
+    "status_indicator": {
+      "base": "absolute bottom-0 right-0 block rounded-full ring-2 ring-white",
+      "online": "bg-emerald-500 h-3 w-3",
+      "offline": "bg-slate-300 h-3 w-3"
+    }
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "soft": "shadow-[0_2px_8px_rgba(0,0,0,0.05)]",
+      "medium": "shadow-[0_4px_16px_rgba(0,0,0,0.08)]",
+      "floating": "shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+    },
+    "glassmorphism": {
+      "header": "bg-white/80 backdrop-blur-md border-b border-slate-200/50 supports-[backdrop-filter]:bg-white/60"
+    },
+    "micro_interactions": {
+      "hover_lift": "hover:-translate-y-1 transition-transform duration-300",
+      "active_press": "active:scale-[0.98] transition-transform duration-100"
+    }
+  },
+  "motion": {
+    "transitions": "transition-all duration-300 ease-out",
+    "animation_classes": {
+      "fade_in": "animate-in fade-in duration-500",
+      "slide_up": "animate-in slide-in-from-bottom-4 duration-500",
+      "zoom_in": "animate-in zoom-in-95 duration-300"
+    }
+  },
+  "media": {
+    "image_urls": {
+      "login_bg": {
+        "url": "https://images.unsplash.com/photo-1616952555588-e1d2d732af76",
+        "alt": "Modern minimal office architecture",
+        "usage": "Full screen background for Login/Signup pages with heavy overlay"
+      },
+      "empty_state": {
+        "url": "https://images.pexels.com/photos/12977019/pexels-photo-12977019.jpeg",
+        "alt": "Abstract geometric shapes",
+        "usage": "Use for empty message lists or zero search results"
+      },
+      "avatars": [
+        "https://images.unsplash.com/photo-1758599543111-36ce5c34fceb",
+        "https://images.unsplash.com/photo-1651684215020-f7a5b6610f23",
+        "https://images.pexels.com/photos/33871730/pexels-photo-33871730.jpeg",
+        "https://images.pexels.com/photos/34129722/pexels-photo-34129722.jpeg"
+      ]
+    }
+  },
+  "accessibility": {
+    "contrast_check": "Ensure all text meets WCAG AA standards. Use slate-500 only on white, not on grey.",
+    "focus_states": "All interactive elements must have a visible ring-2 ring-offset-2 ring-primary focus state.",
+    "aria_labels": "Buttons with icons only must have aria-label."
+  },
+  "universal_guidelines": [
+    "Do NOT use gradients for main backgrounds. Keep it matte and clean.",
+    "Use 2x more padding than you think is necessary. White space is luxury.",
+    "Use 'Outfit' font for all headings (h1-h3) and 'DM Sans' for body.",
+    "Do not use generic blue (#3b82f6) for primary actions. Use the defined Slate Indigo.",
+    "Every interactive element must have a hover state.",
+    "Use 'sonner' for toast notifications.",
+    "Use 'lucide-react' for icons.",
+    "All components must use 'data-testid' attributes for testing."
+  ]
+}
