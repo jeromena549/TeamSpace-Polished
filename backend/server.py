@@ -288,7 +288,8 @@ async def login(credentials: UserLogin, response: Response):
         key='auth_token',
         value=token,
         httponly=True,
-        samesite='lax',
+        samesite='none',
+        secure=True,
         max_age=JWT_EXPIRY_HOURS * 3600
     )
     
