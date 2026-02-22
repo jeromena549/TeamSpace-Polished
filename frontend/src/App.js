@@ -313,7 +313,17 @@ const SignupPage = () => {
       toast.success("Account created! Welcome to Sync");
       navigate("/me");
     } catch (error) {
-      toast.error(error.response?.data?.detail || "Failed to create account");
+      // Handle validation errors (can be array or string)
+      const detail = error.response?.data?.detail;
+      let errorMessage = "Failed to create account";
+      if (typeof detail === "string") {
+        errorMessage = detail;
+      } else if (Array.isArray(detail) && detail.length > 0) {
+        errorMessage = detail[0]?.msg || detail[0]?.message || errorMessage;
+      } else if (detail?.msg) {
+        errorMessage = detail.msg;
+      }
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
