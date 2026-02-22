@@ -227,7 +227,14 @@ const LoginPage = () => {
       toast.success("Welcome back!");
       navigate("/members");
     } catch (error) {
-      toast.error(error.response?.data?.detail || "Invalid credentials");
+      const detail = error.response?.data?.detail;
+      let errorMessage = "Invalid credentials";
+      if (typeof detail === "string") {
+        errorMessage = detail;
+      } else if (Array.isArray(detail) && detail.length > 0) {
+        errorMessage = detail[0]?.msg || detail[0]?.message || errorMessage;
+      }
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
